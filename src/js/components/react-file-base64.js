@@ -13,6 +13,7 @@ export default class FileBase64 extends React.Component {
     super(props);
     this.state = {
       files: [],
+      accept: ''
     };
   }
 
@@ -65,6 +66,7 @@ export default class FileBase64 extends React.Component {
     return (
       <input
         type="file"
+        accept={this.props.accept}
         onChange={ this.handleChange.bind(this) }
         multiple={ this.props.multiple } />
     );
